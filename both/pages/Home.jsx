@@ -5,8 +5,7 @@ Home = React.createClass({
   render() {
     return (
       <div>
-        <h1>Home 2</h1>
-        <Link to='about'>About</Link>
+        <h1>Home</h1>
       </div>
     );
   }
