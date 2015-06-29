@@ -1,13 +1,14 @@
 /* jshint maxlen: false */
+var { Link } = Router;
 
 Home = React.createClass({
   render() {
     return (
-      <div className='home-container'>
-        <h1>Home</h1>
+      <div>
+        <h1>Home 2</h1>
+        <Link to='about'>About</Link>
       </div>
     );
-  },
-
+  }
 });
 

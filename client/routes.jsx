@@ -1,24 +1,19 @@
-var {
-  Route,
-  NotFoundRoute,
-  DefaultRoute
-} = ReactRouter;
+/*global React, Layout, Home, About */
+var { Route, DefaultRoute, } = Router;
 
 var routes = (
-  <Route name="root" handler={Home} path="/">
-    <Route name="todoList" path="/posts" handler={PostsIndex} />
-  </Route>
-)
+  <Route path="/" handler={Layout}>
 
-var router = ReactRouter.create({
-  routes: routes,
-  location: ReactRouter.HistoryLocation
-});
+    <DefaultRoute name='home' handler={Home}/>
+    <Route name='about' path="about" handler={About}/>
+
+  </Route>
+);
 
 
 Meteor.startup(function () {
-  router.run(function (Handler, state) {
-    React.render(<Handler />, document.getElementById('app-container'));
+  Router.run(routes, Router.HistoryLocation, (Root) => {
+    React.render(<Root/>, document.body);
   });
 });
 

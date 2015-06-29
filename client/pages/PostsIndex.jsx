@@ -7,7 +7,6 @@ PostsIndex = React.createClass({
         <h1>Posts</h1>
       </div>
     );
-  },
-
+  }
 });
 

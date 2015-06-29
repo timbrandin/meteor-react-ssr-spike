@@ -1,1 +1,1 @@
-ReactRouter = require("react-router");
+Router = require("react-router");
